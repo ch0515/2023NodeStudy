@@ -8,19 +8,19 @@
 // //a = 10; //에러 const는 값을 바꿀 수 없음
 
 //함수
-function add(n1, n2){
-  return n1+n2;
-}
+// function add(n1, n2){
+//   return n1+n2;
+// }
 
-result = add(1,2);
-console.log(result); //3
+// result = add(1,2);
+// console.log(result); //3
 
-plus = add; //plus도 add()의 역할을 할 수 있음
-result = plus(3,4);
-console.log(result);
+// plus = add; //plus도 add()의 역할을 할 수 있음
+// result = plus(3,4);
+// console.log(result);
 
-sub = function(n1,n2){
+sub = (n1,n2) => {
   return n1-n2;
 }
 result = sub(3,2);
-console.log(result);
+console.log(result); // 1
