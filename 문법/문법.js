@@ -23,8 +23,9 @@
 // result = sub(3,2);
 // console.log(result); // 1
 
-square = num => num * num;
+// square = num => num * num;
 
-result = square(3);
-console.log(result);
+// result = square(3);
+// console.log(result);
 
+result = function (n1, n2) {};
