@@ -9,3 +9,8 @@ arr.forEach(function (data, index) {
 const cherryIndex = arr.findIndex((data) => data === "cherry");
 
 console.log(cherryIndex);
+
+arr.push("grape");
+
+//배열 끝부분 데이터 꺼냄
+const x = arr.pop();
