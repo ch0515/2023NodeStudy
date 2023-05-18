@@ -19,7 +19,7 @@ const server = http.createServer(function(req, res){
     // 스트림 : 파일을 부분적으로 쪼개서 실시간으로 처리함
     // renderfile(ejs대상경로, ejs에 넘겨줄 데이터, 이후에 실행할 callback)
     ejs.renderFile(path.join(__dirname, 'template', 'food.ejs')
-    , {food1: food1, food2: food2, food3: food3}
+    , {food1, food2, food3}
     // 데이터를 넘겨받은 ejs코드(data)를 클라이언트에게 보낸다.
     , function(err, data){
       res.end(data);
