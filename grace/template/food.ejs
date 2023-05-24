@@ -8,9 +8,12 @@
 </head>
 <body>
   <h1>
-    <li><%= food1 %></li>
-    <li><%= food2 %></li>
-    <li><%= food3 %></li>
+    좋아하는 음식
   </h1>
+  <ul>
+    <% food.forEach(function (e){ %>
+        <li><%= e %></li>
+    <% }); %>
+  </ul>
 </body>
 </html>
