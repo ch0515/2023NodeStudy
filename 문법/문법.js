@@ -28,4 +28,4 @@
 // result = square(3);
 // console.log(result);
 
-result = function (n1, n2) {};
+result = n1, n2 => n1+n2;

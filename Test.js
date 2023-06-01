@@ -6,4 +6,4 @@ app.get('/', function(req, res, next){
   res.send('Hello World');
 });
 
-app.listen(3000); //다음 수행 문제
+app.listen(3000);
