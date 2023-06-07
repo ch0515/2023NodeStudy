@@ -13,7 +13,7 @@ const pool = mysql.createPool({
 });
 
 pool.query("SELECT * FROM player", (err, results) => {
-  for(const r of results){
+  for(let r of results){
     console.log(r);
   }
 });
