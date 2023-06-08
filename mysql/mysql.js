@@ -4,7 +4,7 @@ require('dotenv').config({
   path: path.join(__dirname, '.env')
 });
 
-//mysql 시스템 정보(절대로 공개하면 안됨)
+//mysql 시스템 정보(절대로 공개하면 안됨)**
 const pool = mysql.createPool({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
@@ -20,14 +20,36 @@ const insertData = {
   deaths: 3,
   assists: 8
 };
-pool.query("INSERT INTO player SET ?", insertData)
+// pool.query("INSERT INTO player SET ?", insertData)
+// .then(() => {
+//   console.log('INSERT 성공')
+// })
+// .catch(err => {
+//   console.log(err);
+// });
+
+const updateData = {
+  name: "sungwoong",
+  kills: 15,
+  deaths: 10
+}
+
+// pool.query("UPDATE player SET ? WHERE name = ?", [updateData, "bengi"])
+// .then(() => {
+//   console.log("UPDATE 성공")
+// })
+// .catch(err => {
+//   console.err(err);
+// });
+pool.query("DELETE FROM player WHERE name = ?", "sungwoong")
 .then(() => {
-  console.log('INSERT 성공')
+  console.log("DELETE 성공")
 })
 .catch(err => {
-  console.log(err);
+  console.err(err);
 });
 
+//SELECT 문은 결과값을 받아야한다*
 pool.query("SELECT * FROM player")
 .then(([results]) => {
   for(const r of results){
