@@ -12,6 +12,22 @@ const pool = mysql.createPool({
   database: process.env.DB_DB,
 });
 
+const insertData = {
+  name: 'bengi',
+  Lane: 'jg',
+  team: 't1',
+  kills: 5,
+  deaths: 3,
+  assists: 8
+};
+pool.query("INSERT INTO player SET ?", insertData)
+.then(() => {
+  console.log('INSERT 성공')
+})
+.catch(err => {
+  console.log(err);
+});
+
 pool.query("SELECT * FROM player")
 .then(([results]) => {
   for(const r of results){
