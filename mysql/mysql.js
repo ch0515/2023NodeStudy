@@ -13,12 +13,14 @@ const pool = mysql.createPool({
 });
 
 pool.query("SELECT * FROM player")
-.then(([result]) => {
+.then(([results]) => {
   for(const r of results){
     console.log(r);
   }
 })
-
+.catch(err => {
+  console.error(err);
+});
 // pool.query("SELECT * FROM player", (err, results) => {
 //   for(let r of results){
 //     console.log(r);
