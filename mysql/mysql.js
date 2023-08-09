@@ -49,7 +49,7 @@ pool.query("DELETE FROM player WHERE name = ?", "sungwoong")
   console.err(err);
 });
 
-//SELECT 문은 결과값을 받아야한다*
+//SELECT 문은 결과값을 받아야한다*.
 pool.query("SELECT * FROM player")
 .then(([results]) => {
   for(const r of results){
